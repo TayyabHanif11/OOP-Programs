@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-class BankAccount {
+class Bankaccount {
 private:
     double* balance;  // Pointer to dynamically allocate memory for balance
 
 public:
     // Constructor: Dynamically allocates memory for the balance
-    BankAccount(double amount) {
+    Bankaccount(double amount) {
         balance = new double(amount);
         cout << "BankAccount created with balance: " << *balance << endl;
     }
 
     // Deep Copy Constructor: Allocates new memory for copied object
-    BankAccount(const BankAccount& other) {
+    Bankaccount(const Bankaccount& other) {
         balance = new double(*other.balance);  // Creates a new copy
         cout << "Deep copy constructor called!" << endl;
     }
@@ -29,7 +29,7 @@ public:
     }
 
     // Destructor: Properly deallocates memory
-    ~BankAccount() {
+    ~Bankaccount() {
         cout << "Deleting balance: " << *balance << endl;
         delete balance;
     }
