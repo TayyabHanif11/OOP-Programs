@@ -28,10 +28,10 @@ int main() {
     
     
 //    Task 2
-    BankAccount account1(1000.0);
+    Bankaccount account1(1000.0);
 
     // Create a deep copy using the custom copy constructor
-    BankAccount account2 = account1;
+    Bankaccount account2 = account1;
 
     cout << "\nBefore modifying account2:" << endl;
     cout << "account1 ";
